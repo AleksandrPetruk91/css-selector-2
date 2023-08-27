@@ -196,3 +196,98 @@ p::after {
   content: '$$$';
   color: blueviolet;
 }
+
+/* Cтилізуєякщо активна сторінка з даним посиланням */
+#test:target {
+  color: red;
+}
+
+/* Посилання на яке ще не заходили */
+.link:link {
+  color: blueviolet;
+}
+
+/* Посилання на яке навели микою */
+.link:hover {
+  color: rgb(255, 233, 30);
+}
+
+/* Посилання на якому натиснений курсор */
+.link:active {
+  color: rgb(13, 1, 85);
+}
+
+/* Посилання на якому натиснений курсор,для input */
+.link:focus {
+  color: rgb(93, 89, 116);
+}
+
+/* Якщо поле імпута активне */
+input:focus {
+  background-color: rgb(71, 207, 139);
+}
+
+/* Якщо форма в фокусі */
+.card:focus-within {
+  background-color: rgb(71, 207, 139);
+}
+
+/* Якщо в тезі є class="card" і "lang="fr" */
+.card:lang(fr) {
+  background-color: rgb(153, 206, 179);
+}
+
+/* Тег з активним посиланням */
+button:enabled {
+  background-color: rgb(153, 206, 179);
+}
+
+/* Тег із атрибутом disabled */
+button:disabled {
+  background-color: rgb(153, 206, 179);
+}
+
+/* Тег для активного input */
+input:read-write {
+  background-color: rgb(153, 206, 179);
+}
+
+/* Тег для неактивного input */
+input:read-only {
+  background-color: rgb(153, 206, 179);
+}
+
+/* Тег тексту біля активного checkbox*/
+input[checkbox]:checked ~ span {
+  background-color: rgb(153, 206, 179);
+}
+
+/* Для полявводу що є валідним, є атрибут valid*/
+input:valid {
+  background-color: rgb(153, 206, 179);
+}
+
+/* Для полявводу яку не є валідним */
+input:invalid {
+  background-color: rgb(153, 206, 179);
+}
+
+/* Для полявводу яку 'є необовїязковим'*/
+input:invalid {
+  background-color: rgb(153, 206, 179);
+}
+
+/* Для input type="number" коли виходить за межі min max*/
+.number:out-of-range {
+  background-color: rgb(153, 206, 179);
+}
+
+/* Для input type="number" коли входить в межі min max*/
+.number:in-range {
+  background-color: rgb(153, 206, 179);
+}
+
+/* Для input коли активний playceholder*/
+.input:placeholder-shown ~ span {
+  background-color: red;
+}
