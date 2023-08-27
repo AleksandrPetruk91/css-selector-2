@@ -1,0 +1,198 @@
+/* Абстрактний кореневий батьківський тег HTML  */
+:root {
+  background: rgb(190, 120, 87);
+}
+
+html {
+  max-width: 720px;
+}
+
+body {
+  background: #ffffff;
+}
+
+/* Для всіх тегів на сорінці */
+* {
+  color: rgb(177, 64, 64);
+}
+
+/* До всіх вказаних тегів */
+h1 {
+  color: #140d74;
+}
+
+/* До всіх тегів де вказаний class="card"  */
+.card {
+  background: #140d74;
+}
+
+/* До всіх тегів де вказаний id="user" */
+#user {
+  color: red;
+}
+
+/* Перелік селекторів для яких вказаний стиль CSS */
+h1,
+.box,
+#user {
+  color: red;
+}
+
+/* Для всіх тегів <p>,які є дочірніми тегу <div> */
+div > p {
+  color: black;
+}
+
+/* Для всіх тегів,які є нащадками section та де є клас .dox  */
+section .dox {
+  color: rgb(255, 255, 255);
+}
+
+/* Для тегу p,який іде відразу після h1 */
+h1 + p {
+  color: blue;
+}
+
+/* Для всіх тегів div,який ідуть відразу після h1 */
+h1 ~ div {
+  color: blue;
+}
+
+/* Перший тег зі списку в батьківському тегу ul */
+ul > li:first-child {
+  color: blue;
+}
+
+/* Останній тег зі списку в батьківському тегу ul */
+ul > li:last-child {
+  color: rgb(113, 212, 127);
+}
+
+/* Стилізує тег якщо він одиночний у своєму роді всередені батьківського тегу ul*/
+ul > li:only-child {
+  color: rgb(113, 212, 127);
+}
+
+/* Обирає тег який іде першим у списку серед таких же тегів */
+p:first-of-type {
+  color: rgb(113, 212, 127);
+}
+
+/* Обирає тег який іде останнім у списку серед таких же тегів */
+p:last-of-type {
+  color: rgb(113, 212, 127);
+}
+
+/* Обирає тег який єдиний у свому роді у списку  тегів */
+p:only-of-type {
+  color: rgb(113, 212, 127);
+}
+
+/* Вказує який по порядку тег сред братів та сестер */
+div:nth-child(6) {
+  color: blue;
+}
+
+/* Обирає парні теги серед братів та сестер */
+div:nth-child(even) {
+  color: blue;
+}
+
+/* Обирає не парні теги серед братів та сестер */
+p:nth-child(odd) {
+  color: blue;
+}
+
+/* Обирає кожен третій тег, починаємо рахувати з другого */
+div:nth-child(3n + 2) {
+  color: blue;
+}
+
+/* Обирає кожен третій тег, починаємо рахувати з кінця */
+div:nth-last-child(3) {
+  color: blue;
+}
+
+/* Кожен другий тег серед свого виду */
+p:nth-of-type(2n) {
+  color: aquamarine;
+}
+
+/* Кожен другий тег серед свого виду з кінця */
+p:nth-last-of-type(2n) {
+  color: aquamarine;
+}
+
+/* Усі теги div, окрім тегу з класом 'сard' */
+.div:not(.card) {
+  color: blue;
+}
+
+/* Для пустого тегу типу <div></div> */
+div:empty {
+  height: 20px;
+  background: #33289b;
+}
+
+/* Тег в якому є вказаний атрибут */
+div[required] {
+  background: #831f4d;
+}
+
+/* Тег із вказаним атрибутом та значенням */
+p[type='number'] {
+  background: #140d74;
+}
+
+/* (Обирає якщо в списку атрибутів є вказаний) */
+.input-dark[rel~='external'] {
+  height: 30px;
+  background: #9ab819;
+}
+
+/* (список атрибутів починається з 'btn') */
+button[class|='btn'] {
+  background: red;
+}
+
+/* (атрибут значення якого починається з 'btn') */
+button[class^='btn'] {
+  background: rgb(116, 30, 30);
+}
+
+/* (Обирає якщо в значенні атрибута присутнє "...sec...") */
+button[class*='sec'] {
+  background: rgb(189, 171, 171);
+}
+
+/* (Якщо значення закінчується на 'primary') */
+button[class$='primary'] {
+  background: rgb(87, 141, 51);
+}
+
+/* (Стилізує першу літеру вказаного рядка) */
+p::first-letter {
+  color: blue;
+}
+
+/* (Перший рядок тексту) */
+p::first-line {
+  color: rgb(52, 219, 46);
+}
+
+/* (Стилізує placeholder в input) */
+.input::placeholder {
+  color: rgb(36, 150, 93);
+}
+
+/* (Вставляє контент перед основним текстом) */
+p::before {
+  content: '$$$';
+  color: blueviolet;
+}
+
+/* (Вставляє контент після тексту) */
+p::after {
+  content: '$$$';
+  color: blueviolet;
+}
